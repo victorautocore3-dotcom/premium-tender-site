@@ -13,8 +13,8 @@ export const ServiceAccordion: React.FC<ServiceAccordionProps> = ({
   onSelectService,
   onStartProjectForService
 }) => {
-  // Only one item open at a time; start with 'branding' open as default highlight
-  const [openServiceId, setOpenServiceId] = useState<string | null>('branding');
+  // Only one item open at a time; start with 'tender-writing' open as default highlight
+  const [openServiceId, setOpenServiceId] = useState<string | null>('tender-writing');
 
   const toggleService = (id: string) => {
     setOpenServiceId((prev) => (prev === id ? null : id));
@@ -30,21 +30,21 @@ export const ServiceAccordion: React.FC<ServiceAccordionProps> = ({
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">
-              // METHODOLOGY & CAPABILITIES
+              // SPECIALIST BID DISCIPLINES
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Comprehensive <span className="font-serif-luxury italic font-normal text-amber-200">Solutions</span>
+            Our <span className="font-serif-luxury italic font-normal text-amber-200">Services</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-neutral-400 max-w-xl font-light">
-            Nine specialized disciplines harmonized to drive generational business agility,
-            elevated customer experiences, and brand equity expansion across Asian markets.
+            Four dedicated tender writing and bid management services designed to help SMEs qualify,
+            craft, present, and win high-margin public and private sector contracts.
           </p>
         </div>
 
         <div className="text-right hidden sm:block">
           <span className="text-xs font-mono text-neutral-400">
-            CLICK ROW TO EXPAND CAPABILITY MATRIX
+            CLICK ROW TO EXPAND SCOPE MATRIX
           </span>
         </div>
       </div>
@@ -220,7 +220,7 @@ export const ServiceAccordion: React.FC<ServiceAccordionProps> = ({
                               {service.title} Laboratory
                             </span>
                             <span className="text-[11px] font-mono text-neutral-300">
-                              Consulus Global Case Archive
+                              Tender Specialist Procurement Suite
                             </span>
                           </div>
                         </div>

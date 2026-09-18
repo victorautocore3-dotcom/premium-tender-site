@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, ArrowUpRight, Sparkles, Building, Mail, User, Globe } from 'lucide-react';
+import { X, Check, ArrowUpRight, Sparkles, Building, Mail, User, Globe, Clock } from 'lucide-react';
 import { SERVICES_DATA } from '../data/agencyData';
 
 interface ProjectModalProps {
@@ -14,13 +14,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   preselectedService
 }) => {
   const [selectedServices, setSelectedServices] = useState<string[]>(
-    preselectedService ? [preselectedService] : ['Branding']
+    preselectedService ? [preselectedService] : ['Tender Writing']
   );
   const [companyName, setCompanyName] = useState('');
   const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
-  const [region, setRegion] = useState('Singapore');
-  const [hasEDGInterest, setHasEDGInterest] = useState(true);
+  const [sector, setSector] = useState('UK Central Government & CCS');
+  const [isUrgentDeadline, setIsUrgentDeadline] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   if (!isOpen) return null;
@@ -64,14 +64,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <Check className="w-8 h-8" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Inquiry Dispatched to Senior Partners
+              Tender Brief Received by Senior Bid Desk
             </h3>
             <p className="text-sm text-neutral-300 max-w-md mx-auto leading-relaxed">
-              Thank you, <span className="text-white font-medium">{contactName || 'Valued Partner'}</span>. Our Managing Director for {region} will review {companyName ? `for ${companyName}` : 'your strategic brief'} and contact you within 24 business hours.
+              Thank you, <span className="text-white font-medium">{contactName || 'Client Partner'}</span>. Our Principal Bid Writer will review your tender requirements {companyName ? `for ${companyName}` : ''} across <span className="text-cyan-300">{sector}</span> and respond within 24 hours with an initial compliance evaluation.
             </p>
-            {hasEDGInterest && (
-              <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs text-amber-200 max-w-sm mx-auto font-mono">
-                ✦ Enterprise SG EDG Grant assessment dossier will be included.
+            {isUrgentDeadline && (
+              <div className="p-3 bg-rose-500/10 border border-rose-500/20 rounded-xl text-xs text-rose-200 max-w-sm mx-auto font-mono flex items-center gap-2 justify-center">
+                <Clock className="w-4 h-4 text-rose-400 shrink-0" />
+                <span>Urgent 14-day turnaround escalation triggered.</span>
               </div>
             )}
             <div className="pt-4">
@@ -82,7 +83,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 }}
                 className="px-6 py-2.5 rounded-full bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors cursor-pointer"
               >
-                Return to Studio
+                Return to Site
               </button>
             </div>
           </div>
@@ -91,20 +92,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs font-mono mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>CONFIDENTIAL ENGAGEMENT BRIEF</span>
+                <span>CONFIDENTIAL TENDER BRIEF</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                Start a Transformation Project
+                Submit A Tender Brief
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 mt-1 font-light">
-                Consult with our senior strategy partners on brand positioning, business design, and regional expansion.
+                Consult with our APMP-certified bid managers on upcoming public RFPs, government frameworks, or private contracts.
               </p>
             </div>
 
             {/* Service Selection Chips */}
             <div className="space-y-2">
               <label className="text-xs font-mono uppercase tracking-wider text-neutral-300">
-                Select Relevant Disciplines
+                Required Services
               </label>
               <div className="flex flex-wrap gap-2">
                 {SERVICES_DATA.map((srv) => {
@@ -137,7 +138,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Apex Holdings Pte Ltd"
+                  placeholder="e.g. Apex Engineering Ltd"
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
@@ -147,12 +148,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="space-y-1.5">
                 <label className="text-xs font-mono text-neutral-400 flex items-center gap-1.5">
                   <User className="w-3.5 h-3.5 text-neutral-500" />
-                  Your Name & Role
+                  Your Name & Title
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="e.g. Alex Tan, CEO"
+                  placeholder="e.g. Rachel Adams, Commercial Director"
                   value={contactName}
                   onChange={(e) => setContactName(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
@@ -167,7 +168,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 <input
                   type="email"
                   required
-                  placeholder="name@company.com"
+                  placeholder="r.adams@apexengineering.co.uk"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
@@ -177,46 +178,46 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               <div className="space-y-1.5">
                 <label className="text-xs font-mono text-neutral-400 flex items-center gap-1.5">
                   <Globe className="w-3.5 h-3.5 text-neutral-500" />
-                  Primary Market Region
+                  Procurement Sector / Framework
                 </label>
                 <select
-                  value={region}
-                  onChange={(e) => setRegion(e.target.value)}
+                  value={sector}
+                  onChange={(e) => setSector(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#1a1a1f] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
                 >
-                  <option value="Singapore">Singapore (Global HQ)</option>
-                  <option value="Indonesia">Indonesia</option>
-                  <option value="Philippines">Philippines</option>
-                  <option value="Thailand">Thailand</option>
-                  <option value="Japan">Japan</option>
-                  <option value="Other APAC / Global">Other APAC / Global</option>
+                  <option value="UK Central Government & CCS">Crown Commercial Service (CCS)</option>
+                  <option value="NHS Trusts & Healthcare">NHS Trusts & Healthcare</option>
+                  <option value="Local Authorities & Councils">Local Councils & Housing</option>
+                  <option value="Commercial Construction & Infrastructure">Construction & Infrastructure</option>
+                  <option value="Defence, Security & Blue Light">Defence & Security</option>
+                  <option value="Private Commercial RFP">Private Sector Commercial RFP</option>
                 </select>
               </div>
             </div>
 
-            {/* EDG Co-Funding Checkbox */}
-            <label className="flex items-start gap-3 p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 cursor-pointer">
+            {/* Fast Turnaround Notice */}
+            <label className="flex items-start gap-3 p-3.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 cursor-pointer">
               <input
                 type="checkbox"
-                checked={hasEDGInterest}
-                onChange={(e) => setHasEDGInterest(e.target.checked)}
-                className="mt-1 accent-amber-400 rounded cursor-pointer"
+                checked={isUrgentDeadline}
+                onChange={(e) => setIsUrgentDeadline(e.target.checked)}
+                className="mt-1 accent-cyan-400 rounded cursor-pointer"
               />
               <div className="text-xs text-neutral-200">
-                <span className="font-semibold text-amber-300">Request Singapore EDG Grant Advisory:</span> Assess whether our enterprise qualifies for up to 50% Enterprise Singapore co-funding on this transformation project.
+                <span className="font-semibold text-cyan-300">Urgent Tender Deadline (&lt;14 Days):</span> Flag this proposal for rapid response bid writer allocation and priority compliance matrix review.
               </div>
             </label>
 
             {/* Submit CTA */}
             <div className="pt-2 flex items-center justify-between gap-4">
               <span className="text-[11px] font-mono text-neutral-500">
-                NDA & Non-Disclosure Protected
+                Confidentiality & Non-Disclosure Protected
               </span>
               <button
                 type="submit"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer shadow-xl"
               >
-                <span>Submit Strategic Brief</span>
+                <span>Submit Tender Brief</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
             </div>

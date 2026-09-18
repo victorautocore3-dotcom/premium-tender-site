@@ -317,7 +317,7 @@ export const ParticlePreloader: React.FC<ParticlePreloaderProps> = ({
         const loadPct = Math.min(100, Math.round((elapsed / 2.0) * 100));
         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
         ctx.font = '500 11px Inter, sans-serif';
-        ctx.fillText(`INITIALIZING BRAND SYSTEMS  ${loadPct}%`, width / 2, height / 2 + Math.min(width, height) * 0.22);
+        ctx.fillText(`INITIALIZING TENDER INTELLIGENCE  ${loadPct}%`, width / 2, height / 2 + Math.min(width, height) * 0.22);
 
         ctx.restore();
       }

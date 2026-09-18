@@ -10,13 +10,13 @@ export const ClientTicker: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="text-[11px] font-mono tracking-widest uppercase text-neutral-400 font-semibold">
-            AS FEATURED IN
+          <span className="text-[11px] font-mono tracking-widest uppercase text-cyan-400 font-semibold">
+            TRUSTED ACROSS UK & PUBLIC FRAMEWORKS
           </span>
           <div className="h-px w-12 bg-white/15" />
         </div>
         <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 hidden sm:inline">
-          Leading Regional Press & Publications
+          Accredited Procurement Portals & Framework Buyers
         </span>
       </div>
 

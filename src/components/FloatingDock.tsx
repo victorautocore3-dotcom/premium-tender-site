@@ -32,33 +32,33 @@ export const FloatingDock: React.FC<FloatingDockProps> = ({
       className="fixed bottom-6 inset-x-0 mx-auto w-fit z-40 max-w-[94vw] transition-all duration-300"
     >
       <div className="bg-black/60 backdrop-blur-xl border border-white/15 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-2xl flex items-center gap-2 sm:gap-4 ring-1 ring-white/5">
-        {/* Solutions link */}
+        {/* Services link */}
         <button
           id="dock-solutions"
           onClick={() => scrollToSection('solutions-section')}
           className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-neutral-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
         >
-          Solutions
+          Services
         </button>
 
-        {/* About link */}
+        {/* Track Record link */}
         <button
           id="dock-about"
           onClick={() => scrollToSection('about-stats-section')}
           className="px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-neutral-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
         >
-          About
+          Track Record
         </button>
 
-        {/* BrandsBuilder.ai link */}
+        {/* BidBuilder.ai link */}
         <button
           id="dock-brandsbuilder"
           onClick={() => scrollToSection('brandsbuilder-section')}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-cyan-300 hover:text-cyan-200 hover:bg-cyan-500/10 transition-colors cursor-pointer"
         >
           <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-          <span className="hidden sm:inline">BrandsBuilder.ai</span>
-          <span className="sm:hidden">AI</span>
+          <span className="hidden sm:inline">BidBuilder.ai</span>
+          <span className="sm:hidden">AI RFP</span>
         </button>
 
         {/* MORE drawer toggle */}

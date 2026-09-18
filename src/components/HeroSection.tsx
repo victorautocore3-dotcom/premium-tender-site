@@ -19,9 +19,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="flex items-center gap-2 mb-8">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs font-mono text-neutral-300 backdrop-blur-md">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="tracking-wider uppercase">Global Brand & Business Transformation</span>
+          <span className="tracking-wider uppercase">Tender Writing & Bid Management Agency</span>
           <span className="text-neutral-500">•</span>
-          <span className="text-cyan-400">Enterprise SG Certified</span>
+          <span className="text-cyan-400">APMP Certified Practitioners</span>
         </div>
       </div>
 
@@ -34,20 +34,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="text-5xl sm:text-7xl xl:text-8xl font-extrabold tracking-tight text-white leading-[1.04]"
           >
             <span className="block font-sans-modern tracking-tighter">
-              Build A Brand
+              Build A Bid
             </span>
             <span className="block font-serif-luxury font-normal italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-rose-200 to-cyan-200 tracking-normal py-1">
-              That Matters
+              That Wins.
             </span>
           </h1>
 
           {/* Subtext highlight */}
-          <div className="pt-2 flex items-center gap-4 text-xs font-mono text-neutral-400">
-            <span>[ SINGAPORE ]</span>
-            <span>[ JAKARTA ]</span>
-            <span>[ MANILA ]</span>
-            <span>[ BANGKOK ]</span>
-            <span>[ TOKYO ]</span>
+          <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-mono text-neutral-400">
+            <span>[ PUBLIC SECTOR ]</span>
+            <span>[ NHS FRAMEWORKS ]</span>
+            <span>[ LOCAL COUNCILS ]</span>
+            <span>[ PRIVATE TENDERS ]</span>
           </div>
         </div>
 
@@ -57,19 +56,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             id="hero-description"
             className="text-base sm:text-lg text-neutral-300 leading-relaxed font-light"
           >
-            Consulus empowers high-growth Asian enterprises, generational family businesses,
-            and institutional innovators to redefine their market space through strategic business
-            design, purpose-led brand identity, and resilient organizational cultures.
+            Tender Specialist helps ambitious SMEs win lucrative government and private sector contracts.
+            We deconstruct complex procurement requirements, craft compliant, top-scoring technical responses,
+            and build persuasive win themes that consistently beat corporate incumbents.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            {/* Pill button: "How We Build Brands ↗" */}
+            {/* Pill button */}
             <button
               id="hero-how-we-build-btn"
               onClick={onLearnHow}
               className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-semibold bg-white text-neutral-950 hover:bg-neutral-200 transition-all duration-200 shadow-xl shadow-white/5 cursor-pointer"
             >
-              <span>How We Build Brands</span>
+              <span>How We Win Bids</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
 
@@ -80,14 +79,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="group inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-sm font-medium text-neutral-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 transition-all cursor-pointer"
             >
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span>Explore Engagement</span>
+              <span>Submit Tender Brief</span>
             </button>
           </div>
 
           {/* Quick Credibility line */}
           <div className="flex items-center gap-3 pt-2 text-xs text-neutral-400 border-t border-white/10">
             <Award className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Eligible Singapore enterprises qualify for up to 50% Enterprise Development Grant (EDG) co-funding.</span>
+            <span>Over £5.3M+ in procured contract value won for small & medium enterprises.</span>
           </div>
         </div>
       </div>

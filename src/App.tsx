@@ -59,9 +59,9 @@ export default function App() {
 
   const handleOpenWhatsApp = () => {
     const text = encodeURIComponent(
-      'Hello Consulus Team, I would like to discuss brand transformation and business design for my enterprise.'
+      'Hello Tender Specialist Team, I would like to discuss tender writing and bid management for an upcoming contract.'
     );
-    window.open(`https://wa.me/6562238816?text=${text}`, '_blank');
+    window.open(`https://wa.me/442079460912?text=${text}`, '_blank');
   };
 
   const handleScrollToSolutions = () => {
@@ -73,7 +73,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-neutral-100 relative selection:bg-cyan-500/30 selection:text-cyan-200">
-      {/* 2. Canvas Particle "C" Preloader Overlay */}
+      {/* 2. Canvas Particle Preloader Overlay */}
       {showPreloader && (
         <ParticlePreloader
           key={replayPreloaderKey}
@@ -89,7 +89,7 @@ export default function App() {
       <AmbientBackground />
 
       {/* 3. Top Infinite Marquee Ticker */}
-      <TopTicker onEDGClick={() => handleOpenStartProject('Branding')} />
+      <TopTicker onEDGClick={() => handleOpenStartProject('Tender Writing')} />
 
       {/* 3. Main Header */}
       <Header
@@ -99,31 +99,31 @@ export default function App() {
       />
 
       <main>
-        {/* 4. Hero Section: "Build A Brand That Matters" */}
+        {/* 4. Hero Section: "Build A Bid That Wins." */}
         <HeroSection
           onLearnHow={handleScrollToSolutions}
           onStartProject={() => handleOpenStartProject()}
         />
 
-        {/* 4. Client Ticker: "AS FEATURED IN" with monochrome logos */}
+        {/* 4. Client Ticker: Procurement Portals & Frameworks */}
         <ClientTicker />
 
-        {/* 5. Interactive Bento Works Grid */}
+        {/* 5. Interactive Case Studies Grid */}
         <WorksGrid
           onSelectProject={(project) => setSelectedProjectForDetail(project)}
         />
 
-        {/* 5. Stats Counter: 1942 FOUNDED IN, 285+ BRANDS, etc. */}
+        {/* 5. Stats Counter: £5.3M+ Procured Tender Value, etc. */}
         <StatsCounter />
 
-        {/* 6. Multi-Colored Service Accordion */}
+        {/* 6. Multi-Colored Service Accordion: Tender Writing, Bid Management, Pitch Deck Design, Procurement Strategy */}
         <ServiceAccordion
           onStartProjectForService={(title) => handleOpenStartProject(title)}
         />
 
-        {/* Dedicated BrandsBuilder.ai Section */}
+        {/* Dedicated BidBuilder.ai Section */}
         <BrandsBuilderSection
-          onExplore={() => handleOpenStartProject('AI BMT')}
+          onExplore={() => handleOpenStartProject('Bid Management')}
         />
       </main>
 

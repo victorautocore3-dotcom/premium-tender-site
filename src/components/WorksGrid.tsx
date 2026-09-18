@@ -12,12 +12,10 @@ export const WorksGrid: React.FC<WorksGridProps> = ({ onSelectProject }) => {
 
   const categories = [
     'All',
-    'Experience Design',
-    'UI/UX Design',
-    'Packaging Design',
-    'Communication Design',
-    'Sustainable Design',
-    'AI BMT'
+    'Tender Writing',
+    'Bid Management',
+    'Pitch Deck Design',
+    'Procurement Strategy'
   ];
 
   const filteredWorks =
@@ -35,15 +33,15 @@ export const WorksGrid: React.FC<WorksGridProps> = ({ onSelectProject }) => {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">
-              // PORTFOLIO ARCHIVES
+              // PROVEN TRACK RECORD
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Featured <span className="font-serif-luxury italic font-normal text-rose-200">Works</span>
+            Case <span className="font-serif-luxury italic font-normal text-rose-200">Studies</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-neutral-400 max-w-xl font-light">
-            Selected case studies demonstrating strategic repositioning, spatial innovation,
-            and scalable digital architecture across the Asia-Pacific corridor.
+            Demonstrated success securing competitive awards, high-value public procurement frameworks,
+            and private commercial contracts for growing small & medium enterprises.
           </p>
         </div>
 
@@ -139,7 +137,7 @@ export const WorksGrid: React.FC<WorksGridProps> = ({ onSelectProject }) => {
       {/* Bottom Exploration Note */}
       <div className="mt-12 text-center">
         <p className="text-xs text-neutral-400 font-mono tracking-wider">
-          SHOWCASING 6 OF 285+ ENTERPRISE CASE STUDIES • ALL RIGHTS RESERVED
+          SHOWCASING HIGHLIGHTS FROM £5.3M+ IN PROCURED CONTRACT VALUE • 100% COMPLIANT SUBMISSIONS
         </p>
       </div>
     </section>

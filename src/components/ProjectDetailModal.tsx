@@ -74,22 +74,22 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
             </div>
             <div>
               <span className="text-neutral-500 block">LOCATION</span>
-              <span className="text-white font-medium">Pan-Asian</span>
+              <span className="text-white font-medium">United Kingdom</span>
             </div>
           </div>
 
           {/* Narrative */}
           <div className="space-y-4">
             <h4 className="text-lg font-bold text-white tracking-tight">
-              Strategic Transformation Narrative
+              Bid Strategy & Award Narrative
             </h4>
             <p className="text-base text-neutral-300 leading-relaxed font-light">
               {project.description}
             </p>
             <p className="text-sm text-neutral-400 leading-relaxed font-light">
-              Consulus engaged multi-disciplinary stakeholders across executive leadership,
-              customer touchpoints, and regional operational teams to re-engineer core brand architecture,
-              unlocking scalable commercial value while honoring institutional heritage.
+              Tender Specialist collaborated directly with client commercial teams, subject matter experts,
+              and executive sponsors to author high-scoring technical responses, robust social value evidence,
+              and 100% compliant tender submission dossiers that won preferred supplier status.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({
               }}
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer shadow-lg"
             >
-              <span>Inquire for Similar Project</span>
+              <span>Inquire for Similar Tender</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
           </div>

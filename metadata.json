@@ -1,6 +1,6 @@
 {
-  "name": "Brand & Business Transformation Studio",
-  "description": "High-performance brand transformation agency platform featuring interactive particle preloader, ambient chromatic visuals, featured bento works, and multi-colored services accordion.",
+  "name": "Tender Specialist",
+  "description": "Premier tender writing and bid management agency helping SMEs win lucrative government and private sector contracts.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

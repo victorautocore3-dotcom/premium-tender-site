@@ -49,7 +49,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           <input
             type="text"
             autoFocus
-            placeholder="Search solutions, works, disciplines, or EDG..."
+            placeholder="Search services, tenders, case studies, or frameworks..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full bg-transparent text-white text-lg placeholder-neutral-500 focus:outline-none"
@@ -75,7 +75,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* Services Section */}
           <div className="space-y-2">
             <span className="text-[11px] font-mono tracking-wider uppercase text-neutral-400">
-              Agency Disciplines ({filteredServices.length})
+              Tender Services ({filteredServices.length})
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {filteredServices.map((srv) => (
@@ -104,7 +104,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* Featured Works Section */}
           <div className="space-y-2">
             <span className="text-[11px] font-mono tracking-wider uppercase text-neutral-400">
-              Selected Works ({filteredProjects.length})
+              Case Studies & Contract Awards ({filteredProjects.length})
             </span>
             <div className="space-y-2">
               {filteredProjects.map((proj) => (
@@ -141,7 +141,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-between text-xs text-cyan-200 font-mono">
             <span className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-              BrandsBuilder.ai Predictive Engine
+              BidBuilder.ai Tender Intelligence Engine
             </span>
             <span className="text-neutral-400">Instant Access</span>
           </div>

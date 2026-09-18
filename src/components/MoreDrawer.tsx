@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, MapPin, Award, Sparkles, BookOpen, RotateCcw, ArrowUpRight, Phone, Mail } from 'lucide-react';
+import { X, MapPin, Award, BookOpen, RotateCcw, ArrowUpRight, Phone } from 'lucide-react';
 
 interface MoreDrawerProps {
   isOpen: boolean;
@@ -17,11 +17,10 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
   if (!isOpen) return null;
 
   const bureaus = [
-    { city: 'Singapore (Global HQ)', address: '100 Tras Street, 100 AM, Singapore 079027', phone: '+65 6223 8816' },
-    { city: 'Jakarta Bureau', address: 'Menara BCA 50th Fl, Grand Indonesia, Jakarta 10310', phone: '+62 21 2358 4400' },
-    { city: 'Manila Bureau', address: 'High Street South Corporate Plaza, BGC, Taguig 1634', phone: '+63 2 8876 1000' },
-    { city: 'Bangkok Bureau', address: 'Sathorn Square Tower, North Sathorn, Bangkok 10500', phone: '+66 2 105 4000' },
-    { city: 'Tokyo Bureau', address: 'Marunouchi Park Building, Chiyoda-ku, Tokyo 100-6908', phone: '+81 3 5220 1000' }
+    { city: 'London & South East (HQ)', address: '100 Bishopsgate, London EC2N 4AG', phone: '+44 20 7946 0912' },
+    { city: 'Manchester & North West Desk', address: '1 St Peter\'s Square, Manchester M2 3AE', phone: '+44 161 496 0841' },
+    { city: 'Birmingham & Midlands Bureau', address: 'The Colmore Building, 20 Colmore Circus, Birmingham B4 6AT', phone: '+44 121 496 0520' },
+    { city: 'Scotland & Northern Frameworks', address: '10 St Andrew Square, Edinburgh EH2 2AF', phone: '+44 131 496 0773' }
   ];
 
   return (
@@ -40,7 +39,7 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
             <h3 className="text-xl font-bold text-white tracking-tight">
-              Agency Directory & Insights
+              Tender Specialist • Desks & Insights
             </h3>
           </div>
           <button
@@ -53,36 +52,36 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
           </button>
         </div>
 
-        {/* Singapore EDG Grant Accreditation */}
-        <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25 space-y-3">
-          <div className="flex items-center gap-2 text-amber-300 font-semibold text-sm">
+        {/* APMP & Procurement Standards Card */}
+        <div className="p-5 rounded-2xl bg-cyan-500/10 border border-cyan-500/25 space-y-3">
+          <div className="flex items-center gap-2 text-cyan-300 font-semibold text-sm">
             <Award className="w-4 h-4" />
-            <span>Enterprise Singapore EDG Co-Funding</span>
+            <span>APMP-Certified Bid Strategy & UK Procurement Compliance</span>
           </div>
           <p className="text-xs text-neutral-300 leading-relaxed font-light">
-            Singapore-registered businesses may receive up to 50% co-funding support for qualifying
-            Core Capabilities (Strategic Brand Transformation, Organizational Redesign, and Innovation).
-            Consulus consultants are certified by Enterprise Singapore-recognized bodies.
+            We operate in full compliance with the UK Procurement Act 2023, Crown Commercial Service (CCS) standards,
+            and NHS England procurement rules. Our certified tender writers ensure strict adherence to evaluation mark schemes,
+            delivering comprehensive win-themes and compliant evidence matrices.
           </p>
           <button
             onClick={() => {
               onClose();
               onStartProject();
             }}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-200 hover:text-amber-100 hover:underline cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-200 hover:text-cyan-100 hover:underline cursor-pointer"
           >
-            Check Your EDG Eligibility ↗
+            Request Free Pre-Bid Evaluation ↗
           </button>
         </div>
 
-        {/* Global Bureaus */}
+        {/* UK Regional Desks */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 font-semibold flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-cyan-400" />
-              Regional Bureaus & Laboratories
+              Regional Bid Desks & Advisory
             </span>
-            <span className="text-[10px] font-mono text-neutral-400">ASIA-PACIFIC</span>
+            <span className="text-[10px] font-mono text-neutral-400">UNITED KINGDOM</span>
           </div>
 
           <div className="space-y-2.5">
@@ -102,23 +101,23 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
           </div>
         </div>
 
-        {/* Publications & Thought Leadership */}
+        {/* Methodology Frameworks */}
         <div className="space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 font-semibold flex items-center gap-2">
-            <BookOpen className="w-3.5 h-3.5 text-purple-400" />
-            Thought Leadership & Frameworks
+            <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+            Proprietary Bid Methodologies
           </span>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-              <span className="text-[10px] font-mono text-rose-300">BOOK</span>
-              <h5 className="text-xs font-bold text-white mt-1">Shape the World</h5>
-              <p className="text-[11px] text-neutral-400 mt-0.5">Brand Transformation Framework for Purposeful Enterprise.</p>
+              <span className="text-[10px] font-mono text-cyan-300">FRAMEWORK</span>
+              <h5 className="text-xs font-bold text-white mt-1">Zero-Defect Bid Matrix</h5>
+              <p className="text-[11px] text-neutral-400 mt-0.5">100% compliance audit eliminating disqualification risk.</p>
             </div>
             <div className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-              <span className="text-[10px] font-mono text-cyan-300">ANNUAL FORUM</span>
-              <h5 className="text-xs font-bold text-white mt-1">Shape the World Summit</h5>
-              <p className="text-[11px] text-neutral-400 mt-0.5">Gathering 300+ CEOs, Ministers & Regional Innovators.</p>
+              <span className="text-[10px] font-mono text-cyan-300">PPN 06/20</span>
+              <h5 className="text-xs font-bold text-white mt-1">Social Value Playbook</h5>
+              <p className="text-[11px] text-neutral-400 mt-0.5">Maximizing the 10-20% social impact and Net Zero criteria.</p>
             </div>
           </div>
         </div>
@@ -128,7 +127,7 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
           <div>
             <div className="text-xs font-semibold text-white">Experience Particle Preloader</div>
             <div className="text-[11px] text-neutral-400 font-light">
-              Replay the 1,000-particle canvas "C" letter animation
+              Replay the interactive canvas particle loading sequence
             </div>
           </div>
           <button
@@ -152,7 +151,7 @@ export const MoreDrawer: React.FC<MoreDrawerProps> = ({
             }}
             className="w-full py-3.5 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xl"
           >
-            <span>Initiate Direct Consultation</span>
+            <span>Submit Tender Brief For Review</span>
             <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>

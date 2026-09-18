@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, Award, Globe, Mail, MessageCircle, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, MessageCircle, ShieldCheck } from 'lucide-react';
 
 interface FooterProps {
   onStartProject: () => void;
@@ -19,16 +19,16 @@ export const Footer: React.FC<FooterProps> = ({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Top Call to Action Banner */}
-        <div className="rounded-3xl p-8 sm:p-12 lg:p-16 bg-gradient-to-r from-neutral-900 via-neutral-900 to-[#12141a] border border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+        <div className="rounded-3xl p-8 sm:p-12 lg:p-16 bg-gradient-to-r from-neutral-900 via-neutral-900 to-[#101827] border border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div className="space-y-3 max-w-2xl">
             <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">
-              READY TO SHAPE THE WORLD?
+              READY TO WIN YOUR NEXT CONTRACT?
             </span>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Let's engineer a brand that leads the next generation.
+              Let's engineer a compliant, high-scoring bid that wins.
             </h3>
             <p className="text-sm text-neutral-400 font-light">
-              Eligible Singapore enterprises qualify for up to 50% Enterprise Development Grant (EDG) co-funding.
+              Helping ambitious SMEs win high-value government frameworks, NHS supply chain awards, and competitive private contracts.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({
               onClick={onStartProject}
               className="group inline-flex items-center gap-2 px-7 py-4 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer shadow-xl"
             >
-              <span>Initiate Project</span>
+              <span>Submit Tender Brief</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
             <button
@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({
               className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-sm font-semibold bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/25 transition-all cursor-pointer"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Us</span>
+              <span>WhatsApp Bid Desk</span>
             </button>
           </div>
         </div>
@@ -56,56 +56,53 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center font-serif-luxury font-bold text-white text-lg">
-                C
+                T
               </div>
-              <span className="font-bold text-lg tracking-wider text-white">CONSULUS</span>
+              <span className="font-bold text-lg tracking-wider text-white">TENDER SPECIALIST</span>
             </div>
             <p className="text-xs leading-relaxed max-w-sm font-light">
-              Consulus is a global brand and business transformation firm established in Singapore.
-              We help leaders reshape organizational purpose, business models, and customer experiences.
+              Tender Specialist is a premier tender writing and bid management consultancy.
+              We deconstruct buyer criteria, craft compliant, top-scoring technical responses, and help SMEs win lucrative contracts.
             </p>
             <div className="flex items-center gap-3 text-xs text-neutral-300 font-mono">
               <ShieldCheck className="w-4 h-4 text-cyan-400" />
-              <span>Enterprise SG Certified Consultants</span>
+              <span>APMP Certified • £5.3M+ Procured Tender Value</span>
             </div>
           </div>
 
-          {/* Col 2: Solutions */}
+          {/* Col 2: Services */}
           <div className="space-y-3">
             <h5 className="text-xs font-mono uppercase tracking-widest text-white font-semibold">
-              Disciplines
+              Services
             </h5>
             <ul className="space-y-2 text-xs">
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Branding Strategy</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Business Design</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Experience Design</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">UI/UX Design</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Packaging Design</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Sustainable Design</a></li>
-              <li><a href="#solutions-section" className="hover:text-white transition-colors">Fractional CBO</a></li>
-              <li><a href="#brandsbuilder-section" className="text-cyan-400 hover:text-cyan-300 transition-colors">BrandsBuilder.ai</a></li>
+              <li><a href="#solutions-section" className="hover:text-white transition-colors">Tender Writing</a></li>
+              <li><a href="#solutions-section" className="hover:text-white transition-colors">Bid Management</a></li>
+              <li><a href="#solutions-section" className="hover:text-white transition-colors">Pitch Deck Design</a></li>
+              <li><a href="#solutions-section" className="hover:text-white transition-colors">Procurement Strategy</a></li>
+              <li><a href="#brandsbuilder-section" className="text-cyan-400 hover:text-cyan-300 transition-colors">BidBuilder.ai Engine</a></li>
             </ul>
           </div>
 
-          {/* Col 3: Regional Hubs */}
+          {/* Col 3: Sectors & Frameworks */}
           <div className="space-y-3">
             <h5 className="text-xs font-mono uppercase tracking-widest text-white font-semibold">
-              APAC Hubs
+              Sectors & Portals
             </h5>
             <ul className="space-y-2 text-xs font-mono">
-              <li className="text-neutral-300">Singapore (Global HQ)</li>
-              <li>Jakarta, Indonesia</li>
-              <li>Manila, Philippines</li>
-              <li>Bangkok, Thailand</li>
-              <li>Tokyo, Japan</li>
-              <li>Zurich, Switzerland</li>
+              <li className="text-neutral-300">Crown Commercial Service</li>
+              <li>NHS Trusts & Healthcare</li>
+              <li>Local Councils & Housing</li>
+              <li>Commercial Construction</li>
+              <li>Defence & Security</li>
+              <li>Private Sector Tenders</li>
             </ul>
           </div>
 
-          {/* Col 4: Platform */}
+          {/* Col 4: Interactive */}
           <div className="space-y-3">
             <h5 className="text-xs font-mono uppercase tracking-widest text-white font-semibold">
-              Interactive
+              Resources
             </h5>
             <ul className="space-y-2 text-xs">
               <li>
@@ -117,13 +114,13 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </li>
               <li>
-                <a href="#top-marquee-ticker" className="hover:text-white transition-colors">
-                  EDG Co-Funding Support
+                <a href="#works-section" className="hover:text-white transition-colors">
+                  Case Studies Archive
                 </a>
               </li>
               <li>
-                <a href="#client-media-ticker" className="hover:text-white transition-colors">
-                  Media & Press
+                <a href="#about-stats-section" className="hover:text-white transition-colors">
+                  Win Rate & Track Record
                 </a>
               </li>
             </ul>
@@ -133,14 +130,14 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
           <div>
-            © {new Date().getFullYear()} Consulus Global Pte Ltd. All rights reserved.
+            © {new Date().getFullYear()} Tender Specialist Ltd. All rights reserved.
           </div>
           <div className="flex items-center gap-6 text-neutral-400">
             <span>Privacy Policy</span>
             <span>•</span>
-            <span>Terms of Advisory</span>
+            <span>Terms of Engagement</span>
             <span>•</span>
-            <span>SG Reg: 200405102W</span>
+            <span>UK Reg: 12894102</span>
           </div>
         </div>
       </div>

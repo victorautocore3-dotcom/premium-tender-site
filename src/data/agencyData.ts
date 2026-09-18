@@ -2,271 +2,159 @@ import { ServiceItem, ProjectItem, StatItem } from '../types';
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
-    id: 'branding',
-    title: 'Branding',
+    id: 'tender-writing',
+    title: 'Tender Writing',
     categoryNumber: '01',
-    colorHex: '#964032', // Terracotta
-    tagline: 'Distinctive Purpose & Enduring Identity',
+    colorHex: '#1E3A8A', // Royal Navy
+    tagline: 'Compliant, High-Scoring & Persuasive Bid Narratives',
     description:
-      'We craft strategic brand architectures, distinctive visual systems, and purposeful narratives that position regional industry leaders for generational relevance and global expansion.',
+      'We deconstruct complex tender specifications, pinpoint evaluation criteria, and craft persuasive, evidence-based technical and commercial responses tailored to outscore your competitors.',
     deliverables: [
-      'Brand Audit & Cultural Semiotics',
-      'Purpose & Value Matrix',
-      'Global Brand Architecture',
-      'Visual & Verbal Identity Systems',
-      'Brand Governance Guidelines'
+      'Full RFP, ITT & PQQ/SQ Response Drafting',
+      'Win Theme & Value Proposition Architecture',
+      'Social Value, Net Zero & ESG Statements',
+      'Technical Method Statements & Case Proofs',
+      'Compliance Matrix & Final Quality Assurance'
     ],
-    image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Terracotta • Brand Core'
+    image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop',
+    accentText: 'Royal Navy • Technical Precision'
   },
   {
-    id: 'business-design',
-    title: 'Business Design',
+    id: 'bid-management',
+    title: 'Bid Management',
     categoryNumber: '02',
-    colorHex: '#1E293B', // Slate Navy
-    tagline: 'Organizational Agility & Commercial Models',
+    colorHex: '#1E293B', // Slate Obsidian
+    tagline: 'End-to-End Bid Governance & Milestone Control',
     description:
-      'Bridging strategy and human behavior to engineer viable, scalable business models that unlock new market paradigms and organizational innovation across Asian markets.',
+      'From bid/no-bid qualification through storyboard workshops to final gateway sign-off, we coordinate your internal subject matter experts and ensure flawless, on-time submissions without panic.',
     deliverables: [
-      'New Business Model Prototyping',
-      'Value Proposition Mapping',
-      'Go-to-Market Strategy',
-      'Organizational Transformation',
-      'Innovation Culture Workshops'
+      'Bid Strategy & Opportunity Qualification',
+      'Bid Program Timelines & Deliverable Tracking',
+      'Red Team & Gold Team Critical Reviews',
+      'Subject Matter Expert (SME) Interviewing',
+      'E-Tendering Portal Upload & Confirmation'
     ],
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Slate Navy • Strategic Engine'
+    accentText: 'Slate Obsidian • Rigorous Governance'
   },
   {
-    id: 'experience-design',
-    title: 'Experience Design',
+    id: 'pitch-deck-design',
+    title: 'Pitch Deck Design',
     categoryNumber: '03',
-    colorHex: '#4A2040', // Plum/Wine
-    tagline: 'Omnichannel Customer Touchpoints',
+    colorHex: '#5B21B6', // Imperial Violet
+    tagline: 'High-Impact Presentations for Buyer Interviews',
     description:
-      'Designing cohesive, sensory-rich human experiences that seamlessly bridge physical environments, hospitality spaces, retail flagships, and digital journeys.',
+      'Turn technical specifications into visually compelling pitch decks and executive leave-behinds designed to captivate procurement panels during competitive tender interviews and presentations.',
     deliverables: [
-      'Customer Journey Architecture',
-      'Spatial & Retail Brand Experiences',
-      'Service Blueprinting & Staff Rituals',
-      'Sensory Brand Environments',
-      'Signature Moment Design'
-    ],
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Plum Wine • Spatial & Sensory'
-  },
-  {
-    id: 'ui-ux-design',
-    title: 'UI/UX Design',
-    categoryNumber: '04',
-    colorHex: '#12372A', // Deep Emerald
-    tagline: 'High-Impact Digital Products & Systems',
-    description:
-      'Elevating enterprise digital platforms with intuitive interfaces, resilient multi-brand design systems, and friction-free user journeys calibrated for high retention and conversion.',
-    deliverables: [
-      'Enterprise UX Research & Heuristics',
-      'Multi-Brand Design Systems',
-      'Responsive Web & Mobile Architecture',
-      'Micro-Interactions & Motion Choreography',
-      'Conversion Rate Optimization'
-    ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Deep Emerald • Digital Precision'
-  },
-  {
-    id: 'packaging-design',
-    title: 'Packaging Design',
-    categoryNumber: '05',
-    colorHex: '#78350F', // Warm Ochre
-    tagline: 'Shelf Dominance & Tactile Storytelling',
-    description:
-      'Translating brand values into tactile unboxing rituals and shelf-stopping structural packaging that balances premium aesthetic prestige with sustainable materials engineering.',
-    deliverables: [
-      'Structural Packaging Prototyping',
-      'Substrate & Material Innovation',
-      'Retail Shelf Impact Studies',
-      'Unboxing Ritual Choreography',
-      'Sustainable Lifecycle Assessment'
-    ],
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Warm Ochre • Tactile Presence'
-  },
-  {
-    id: 'communication-design',
-    title: 'Communication Design',
-    categoryNumber: '06',
-    colorHex: '#6B21A8', // Berry Magenta
-    tagline: 'Multi-Channel Brand Storytelling',
-    description:
-      'Orchestrating compelling integrated campaigns, brand launch films, investor pitch collateral, and cultural editorial content that drives stakeholder alignment and market prestige.',
-    deliverables: [
-      'Launch Narrative Strategy',
-      'Executive & Investor Decks',
-      'Creative Campaign Direction',
-      'Annual Reports & ESG Publications',
-      'Motion Graphics & 3D Visuals'
+      'Bespoke Procurement Pitch Slide Decks',
+      'Methodology & Delivery Phasing Infographics',
+      'Organisational Charts & Key Personnel Bios',
+      'Interactive Placemats & Executive Summaries',
+      'Buyer Panel Rehearsal & Q&A Preparation'
     ],
     image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Berry Magenta • Visual Voice'
+    accentText: 'Imperial Violet • Visual Persuasion'
   },
   {
-    id: 'sustainable-design',
-    title: 'Sustainable Design',
-    categoryNumber: '07',
-    colorHex: '#14532D', // Forest Green
-    tagline: 'Circular Systems & ESG Integration',
+    id: 'procurement-strategy',
+    title: 'Procurement Strategy',
+    categoryNumber: '04',
+    colorHex: '#115E59', // Deep Teal
+    tagline: 'Framework Positioning & Market Intelligence',
     description:
-      'Embedding circular economy principles into products, operational workflows, and stakeholder reporting to help enterprises transition into credible, future-proof sustainable brands.',
+      'Guiding SMEs on upcoming public sector contract pipelines, Dynamic Purchasing Systems (DPS), buyer engagement protocols, and pricing strategies to win lucrative, repeatable revenue streams.',
     deliverables: [
-      'Circularity Audit & Roadmap',
-      'Eco-Conscious Brand Standards',
-      'Carbon Impact Communication',
-      'Renewable Material Sourcing Frameworks',
-      'ESG Narrative Alignment'
+      'Public & Private Contract Pipeline Forecasting',
+      'Framework & Dynamic Purchasing System (DPS) Entry',
+      'Commercial Pricing Benchmarking & Strategy',
+      'Pre-Market Engagement & Early Buyer Dialogue',
+      'Post-Tender Debrief Analysis & Bid Score Audits'
     ],
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Forest Green • Circular Future'
-  },
-  {
-    id: 'fractional-cbo',
-    title: 'Fractional CBO',
-    categoryNumber: '08',
-    colorHex: '#2C7A7B', // Teal
-    tagline: 'Executive Brand Leadership On-Demand',
-    description:
-      'Senior executive stewardship providing high-growth enterprises and mid-market conglomerates with Chief Brand Officer leadership to guide strategic M&A branding, internal alignment, and market expansions.',
-    deliverables: [
-      'Executive Board Advisory',
-      'M&A Brand Harmonization',
-      'Agency Roster Management',
-      'Brand Equity Measurement',
-      'Talent Upskilling & Leadership Coaching'
-    ],
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Teal • Executive Stewardship'
-  },
-  {
-    id: 'ai-bmt',
-    title: 'AI BMT',
-    categoryNumber: '09',
-    colorHex: '#1E3A8A', // Navy Blue
-    tagline: 'Brand Management Technologies Powered by AI',
-    description:
-      'Leveraging predictive brand models, automated brand asset intelligence, and real-time cultural sentiment tracking to maintain continuous brand consistency across dozens of markets.',
-    deliverables: [
-      'Algorithmic Brand Health Scoring',
-      'Generative Visual Governance',
-      'Predictive Competitor Intelligence',
-      'Automated Asset Localization',
-      'Multi-Language Semantic Consistency'
-    ],
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
-    accentText: 'Navy Blue • Intelligent Systems'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+    accentText: 'Deep Teal • Commercial Pipeline'
   }
 ];
 
 export const FEATURED_WORKS: ProjectItem[] = [
   {
     id: 'work-1',
-    title: 'Aura Health Sanctuary',
-    client: 'Aura Wellness Group',
-    category: 'Experience Design',
+    title: 'Healthcare Construction Award',
+    client: 'NHS Foundation Trust & Regional Healthcare Authority',
+    category: 'Tender Writing',
     year: '2025',
-    description: 'Transforming a premier Pan-Asian holistic medicine retreat into a multi-sensory physical and digital sanctuary across Singapore & Bali.',
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop',
+    description: 'Secured a £14.8M capital works framework contract for an SME contractor by delivering a 100% compliant technical response with maximum marks for clinical infection control and Net Zero carbon construction.',
+    image: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=1200&auto=format&fit=crop',
     span: 'col-span-12 lg:col-span-8',
-    tags: ['Spatial Branding', 'Omnichannel Journey', 'Interior Rituals']
+    tags: ['£14.8M Contract Won', '100% Quality Evaluation', 'NHS Healthcare Framework']
   },
   {
     id: 'work-2',
-    title: 'Vanguard Capital AI',
-    client: 'Vanguard Holdings',
-    category: 'UI/UX Design',
+    title: 'Commercial Development Strategy',
+    client: 'Metropolitan Urban Regeneration Council',
+    category: 'Procurement Strategy',
     year: '2024',
-    description: 'Ultra-low latency institutional wealth intelligence dashboard serving Tier-1 Asian private banks with predictive asset modelling.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    description: 'Positioned an ambitious SME developer as preferred supplier on a £22M mixed-use commercial framework, outscoring tier-1 multinational incumbents through distinctive local social value architecture.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
     span: 'col-span-12 lg:col-span-4',
-    tags: ['Fintech UX', 'Design System', 'Dark Mode UI']
+    tags: ['£22M Public Framework', 'Social Value Matrix', 'Lead Supplier Award']
   },
   {
     id: 'work-3',
-    title: 'Solstice Botanical Spirits',
-    client: 'Solstice Distillers',
-    category: 'Packaging Design',
+    title: 'Critical Estates & Facilities Bid',
+    client: 'Government Property Agency & Central Civil Estates',
+    category: 'Bid Management',
     year: '2025',
-    description: 'Zero-waste biodynamic gin packaging featuring bespoke embossed wild-glass bottles and hand-pressed seeded paper labels.',
-    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?q=80&w=1200&auto=format&fit=crop',
-    span: 'col-span-12 lg:col-span-4',
-    tags: ['Sustainable Substrates', 'Luxury Spirits', 'Embossed Glass']
+    description: 'Managed the end-to-end multi-disciplinary tender submission for an 18-building facilities management contract, achieving top technical score and zero compliance non-conformances.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop',
+    span: 'col-span-12 lg:col-span-6',
+    tags: ['Multi-Year Facilities', 'Red Team Audit', '100% Compliance']
   },
   {
     id: 'work-4',
-    title: 'NEXUS Robotics Brand Shift',
-    client: 'Nexus Autonomous Systems',
-    category: 'Communication Design',
+    title: 'Digital Public Services Pitch Deck',
+    client: 'Department for Digital & Regional Transformation',
+    category: 'Pitch Deck Design',
     year: '2024',
-    description: 'Complete brand repositioning and global investor narrative for an autonomous logistics pioneer scaling across Southeast Asia.',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop',
-    span: 'col-span-12 lg:col-span-8',
-    tags: ['Global Launch', '3D Motion', 'Investor Narrative']
-  },
-  {
-    id: 'work-5',
-    title: 'TerraVerde Regenerative Grid',
-    client: 'Terra Energy SG',
-    category: 'Sustainable Design',
-    year: '2025',
-    description: 'Circular brand identity and civic engagement platform empowering 120,000 smart homes to trade localized microgrid solar credits.',
-    image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1200&auto=format&fit=crop',
+    description: 'Architected high-impact visual presentation materials and coached senior SME founders for a competitive buyer interview, converting a shortlist ranking into a definitive contract win.',
+    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200&auto=format&fit=crop',
     span: 'col-span-12 lg:col-span-6',
-    tags: ['Circular Economy', 'Clean Energy', 'Civic Brand']
-  },
-  {
-    id: 'work-6',
-    title: 'BrandsBuilder.ai Enterprise',
-    client: 'Consulus Labs',
-    category: 'AI BMT',
-    year: '2025',
-    description: 'Autonomous brand governance and semantic consistency engine monitoring 40+ regional markets in real time.',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
-    span: 'col-span-12 lg:col-span-6',
-    tags: ['Autonomous Governance', 'Generative AI', 'Brand Health']
+    tags: ['Buyer Presentation', 'Pitch Coaching', 'Framework Appointment']
   }
 ];
 
 export const AGENCY_STATS: StatItem[] = [
   {
-    value: '1942',
-    label: 'FOUNDED IN',
-    subtext: 'Eight decades of generational business transformation'
+    value: '£5.3M+',
+    label: 'PROCURED TENDER VALUE',
+    subtext: 'High-value contracts and frameworks won for growing SME clients'
   },
   {
-    value: '285+',
-    numericTarget: 285,
-    label: 'BRANDS TRANSFORMED',
-    subtext: 'Across 18 cities in Asia, Europe & the Americas'
+    value: '94.8%',
+    numericTarget: 95,
+    label: 'BID WIN RATE',
+    subtext: 'Consistent top-quartile technical evaluation scores on public tenders'
   },
   {
-    value: '8',
-    numericTarget: 8,
-    label: 'ACCREDITATIONS TO DATE',
-    subtext: 'Enterprise Singapore EDG & Certified Management Consultants'
+    value: '180+',
+    numericTarget: 180,
+    label: 'TENDERS SUBMITTED & WON',
+    subtext: 'Across UK Crown Commercial, NHS, local councils, and tier-1 private buyers'
   },
   {
-    value: '54+',
-    numericTarget: 54,
-    label: 'AWARDS & RECOGNITIONS',
-    subtext: 'Red Dot, Good Design Award, Singapore Packaging Awards'
+    value: '100%',
+    numericTarget: 100,
+    label: 'COMPLIANCE AUDIT PASS',
+    subtext: 'Zero disqualifications with thorough gateway reviews and APMP standards'
   }
 ];
 
 export const FEATURED_MEDIA = [
-  { name: 'The Straits Times', tag: 'Singapore National Daily' },
-  { name: 'detikcom', tag: 'Indonesia Premier Media' },
-  { name: 'Tempo', tag: 'Investigative Weekly' },
-  { name: 'Today', tag: 'Singapore Digital' },
-  { name: 'Channel NewsAsia', tag: 'Regional Broadcast' },
-  { name: 'Forbes Asia', tag: 'Business & Wealth' },
-  { name: 'Business Times', tag: 'Financial Daily' },
-  { name: 'Design Week', tag: 'Global Design Review' }
+  { name: 'Crown Commercial Service', tag: 'UK Central Government' },
+  { name: 'NHS Supply Chain', tag: 'Healthcare Frameworks' },
+  { name: 'Find a Tender', tag: 'High-Value Public Notices' },
+  { name: 'ProContract', tag: 'Local Authority Procurement' },
+  { name: 'Contracts Finder', tag: 'SME Government Opportunities' },
+  { name: 'CompeteFor', tag: 'Major Infrastructure Bids' },
+  { name: 'Achilles / UVDB', tag: 'Utilities & Transport' },
+  { name: 'Constructionline Gold', tag: 'Built Environment Standards' }
 ];

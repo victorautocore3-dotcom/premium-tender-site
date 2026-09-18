@@ -13,14 +13,14 @@ export const StatsCounter: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-14 pb-6 border-b border-white/[0.08]">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold">
-              // INSTITUTIONAL HERITAGE & PROVEN TRACK RECORD
+              // MEASURABLE PROCUREMENT OUTCOMES & REVENUE IMPACT
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
-              Decades of Leadership in Asian Brand Transformation
+              Securing Winning Frameworks & Lucrative Contracts for SMEs
             </h2>
           </div>
           <div className="text-xs font-mono text-neutral-400 max-w-xs">
-            Headquartered in Singapore with partner bureaus operating across ASEAN and East Asia.
+            Dedicated bid directors and APMP-certified writers winning across UK public sector, NHS, and private tenders.
           </div>
         </div>
 

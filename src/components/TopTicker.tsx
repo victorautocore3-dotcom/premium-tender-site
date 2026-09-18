@@ -7,7 +7,7 @@ interface TopTickerProps {
 
 export const TopTicker: React.FC<TopTickerProps> = ({ onEDGClick }) => {
   const tickerText =
-    'Brand Transformation for Businesses Growing Across Asia — Up to 50% EDG Support for Eligible Projects. Limited Time Only';
+    'Tender Writing & Bid Management for High-Growth SMEs — Proven 94.8% Public Framework & Private Contract Win Rate. Book A Pre-Bid Review';
 
   return (
     <aside
@@ -22,8 +22,8 @@ export const TopTicker: React.FC<TopTickerProps> = ({ onEDGClick }) => {
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
               <span>{tickerText}</span>
             </span>
-            <span className="inline-flex items-center text-[10px] uppercase tracking-wider text-amber-300/90 font-semibold bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
-              Singapore EDG Grant
+            <span className="inline-flex items-center text-[10px] uppercase tracking-wider text-cyan-300/90 font-semibold bg-cyan-500/10 px-2 py-0.5 rounded-full border border-cyan-500/20">
+              £5.3M+ Procured Value
             </span>
             <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500" />
             <span className="text-neutral-700">✦</span>
