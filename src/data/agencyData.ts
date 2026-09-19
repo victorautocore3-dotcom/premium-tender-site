@@ -16,7 +16,7 @@ export const SERVICES_DATA: ServiceItem[] = [
       'Technical Method Statements & Case Proofs',
       'Compliance Matrix & Final Quality Assurance'
     ],
-    image: '/ChatGPT Image Dec 28, 2025, 04_24_32 AM.png',
+    image: "/portrait.png",
     accentText: 'Royal Navy • Technical Precision'
   },
   {
