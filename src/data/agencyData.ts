@@ -12,7 +12,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     deliverables: [
       'Full RFP, ITT & PQQ/SQ Response Drafting',
       'Win Theme & Value Proposition Architecture',
-      'Social Value, Net Zero & ESG Statements',
+      'Social Value, Naet Zero & ESG Statements',
       'Technical Method Statements & Case Proofs',
       'Compliance Matrix & Final Quality Assurance'
     ],
