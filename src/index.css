@@ -74,6 +74,19 @@ body {
   animation: marquee 22s linear infinite;
 }
 
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 5000ms linear;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 8px;

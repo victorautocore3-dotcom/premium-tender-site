@@ -1,4 +1,4 @@
-import { ServiceItem, ProjectItem, StatItem } from '../types';
+import { ServiceItem, ProjectItem, StatItem, TestimonialItem } from '../types';
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
@@ -158,3 +158,62 @@ export const FEATURED_MEDIA = [
   { name: 'Achilles / UVDB', tag: 'Utilities & Transport' },
   { name: 'Constructionline Gold', tag: 'Built Environment Standards' }
 ];
+
+export const TESTIMONIALS_DATA: TestimonialItem[] = [
+  {
+    id: 't-1',
+    author: 'David Vance',
+    role: 'Managing Director',
+    company: 'Vance Civil Infrastructure',
+    sector: 'Highways & Public Infrastructure',
+    quote: 'Their technical writers transformed our bid narrative from standard compliance into a top-ranked submission. We secured a key place on the £4.2M regional highways framework with an unprecedented 98.5% quality score.',
+    contractWon: '£4.2M Regional Highways Framework',
+    metricBadge: '98.5% Quality Score',
+    rating: 5
+  },
+  {
+    id: 't-2',
+    author: 'Sarah Jenkins',
+    role: 'Head of Commercial Partnerships',
+    company: 'MedCore Diagnostics Ltd',
+    sector: 'NHS & Healthcare Supply Chain',
+    quote: 'Navigating NHS dynamic purchasing systems and stringent social value matrices used to overwhelm our team. They handled every method statement and gateway review flawlessly. We were awarded preferred bidder status on all 3 lots.',
+    contractWon: '£1.8M NHS Trust Equipment DPS',
+    metricBadge: 'Ranked 1st of 18 Bidders',
+    rating: 5
+  },
+  {
+    id: 't-3',
+    author: 'Marcus Thorne',
+    role: 'Chief Executive Officer',
+    company: 'Aegis Cloud Solutions',
+    sector: 'Defence & Crown Commercial Service',
+    quote: 'G-Cloud 14 and CCS RM6263 are fiercely competitive. The bid management discipline and storyboarding they brought to the table gave us the winning edge. The return on investment for our SME has been transformational.',
+    contractWon: '£2.6M CCS Cloud Architecture DPS',
+    metricBadge: '100% Compliance Audit',
+    rating: 5
+  },
+  {
+    id: 't-4',
+    author: 'Elena Rostova',
+    role: 'Operations & Bid Director',
+    company: 'Apex Facilities & Energy Management',
+    sector: 'Local Authority Facilities & Net Zero',
+    quote: 'With an aggressive 12-day turnaround for a tier-1 commercial council contract, their rapid response bid team mobilized within 4 hours. Clear, evidence-backed case proofs and zero compliance defects.',
+    contractWon: '£3.1M Council FM & Net Zero Tender',
+    metricBadge: 'Zero Clarification Defects',
+    rating: 5
+  },
+  {
+    id: 't-5',
+    author: 'Liam O\'Connor',
+    role: 'Commercial Lead',
+    company: 'Fortis Electrical & Rail Contractors',
+    sector: 'Rail & Transport Infrastructure',
+    quote: 'The pitch deck and buyer interview preparation was a masterclass. They didn\'t just write the tender; they coached our leadership through the clarification presentation. That secured the contract outright.',
+    contractWon: '£1.5M Transport for North Framework',
+    metricBadge: 'Unanimous Buyer Selection',
+    rating: 5
+  }
+];
+

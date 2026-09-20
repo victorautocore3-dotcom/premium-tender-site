@@ -29,6 +29,18 @@ export interface StatItem {
   subtext: string;
 }
 
+export interface TestimonialItem {
+  id: string;
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  sector: string;
+  contractWon: string;
+  metricBadge: string;
+  rating?: number;
+}
+
 export interface NavLink {
   label: string;
   href: string;

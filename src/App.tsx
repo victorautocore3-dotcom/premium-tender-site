@@ -7,6 +7,7 @@ import { HeroSection } from './components/HeroSection';
 import { ClientTicker } from './components/ClientTicker';
 import { WorksGrid } from './components/WorksGrid';
 import { StatsCounter } from './components/StatsCounter';
+import { Testimonials } from './components/Testimonials';
 import { ServiceAccordion } from './components/ServiceAccordion';
 import { BrandsBuilderSection } from './components/BrandsBuilderSection';
 import { FloatingDock } from './components/FloatingDock';
@@ -115,6 +116,11 @@ export default function App() {
 
         {/* 5. Stats Counter: £5.3M+ Procured Tender Value, etc. */}
         <StatsCounter />
+
+        {/* Client Testimonials & Success Quotes Horizontal Carousel */}
+        <Testimonials
+          onStartProject={() => handleOpenStartProject()}
+        />
 
         {/* 6. Multi-Colored Service Accordion: Tender Writing, Bid Management, Pitch Deck Design, Procurement Strategy */}
         <ServiceAccordion

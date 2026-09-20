@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, ArrowUpRight, Sparkles, Building, Mail, User, Globe, Clock } from 'lucide-react';
+import { X, Check, ArrowUpRight, Sparkles, Building, Mail, User, Globe, Clock, FileText, Loader2 } from 'lucide-react';
 import { SERVICES_DATA } from '../data/agencyData';
 
 interface ProjectModalProps {
@@ -20,8 +20,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
   const [contactName, setContactName] = useState('');
   const [email, setEmail] = useState('');
   const [sector, setSector] = useState('UK Central Government & CCS');
+  const [message, setMessage] = useState('');
   const [isUrgentDeadline, setIsUrgentDeadline] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   if (!isOpen) return null;
 
@@ -31,9 +34,32 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch('https://formspree.io/f/moevjenr', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json();
+        setErrorMessage(data?.errors?.[0]?.message || 'Submission failed. Please try again.');
+      }
+    } catch {
+      setErrorMessage('A network error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,7 +114,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            action="https://formspree.io/f/moevjenr"
+            method="POST"
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
+            {/* Hidden field capturing selected services */}
+            <input type="hidden" name="services" value={selectedServices.join(', ')} />
+
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 text-xs font-mono mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
@@ -137,6 +171,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 </label>
                 <input
                   type="text"
+                  name="company"
                   required
                   placeholder="e.g. Apex Engineering Ltd"
                   value={companyName}
@@ -152,6 +187,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 </label>
                 <input
                   type="text"
+                  name="name"
                   required
                   placeholder="e.g. Rachel Adams, Commercial Director"
                   value={contactName}
@@ -167,6 +203,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                 </label>
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="r.adams@apexengineering.co.uk"
                   value={email}
@@ -181,6 +218,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
                   Procurement Sector / Framework
                 </label>
                 <select
+                  name="sector"
                   value={sector}
                   onChange={(e) => setSector(e.target.value)}
                   className="w-full px-4 py-2.5 rounded-xl bg-[#1a1a1f] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors"
@@ -195,10 +233,28 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </div>
             </div>
 
+            {/* Tender Scope / Message Textarea */}
+            <div className="space-y-1.5">
+              <label className="text-xs font-mono text-neutral-400 flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5 text-neutral-500" />
+                Tender Overview / Key Requirements
+              </label>
+              <textarea
+                name="message"
+                rows={3}
+                placeholder="Briefly outline contract scope, estimated value, or submission deadline..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 transition-colors resize-none placeholder-neutral-500"
+              />
+            </div>
+
             {/* Fast Turnaround Notice */}
             <label className="flex items-start gap-3 p-3.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 cursor-pointer">
               <input
                 type="checkbox"
+                name="urgent_deadline"
+                value="Yes - Urgent (<14 Days)"
                 checked={isUrgentDeadline}
                 onChange={(e) => setIsUrgentDeadline(e.target.checked)}
                 className="mt-1 accent-cyan-400 rounded cursor-pointer"
@@ -208,6 +264,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </div>
             </label>
 
+            {/* Error banner if submission fails */}
+            {errorMessage && (
+              <div className="p-3 bg-rose-500/10 border border-rose-500/20 rounded-xl text-xs text-rose-200 font-mono">
+                {errorMessage}
+              </div>
+            )}
+
             {/* Submit CTA */}
             <div className="pt-2 flex items-center justify-between gap-4">
               <span className="text-[11px] font-mono text-neutral-500">
@@ -215,10 +278,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </span>
               <button
                 type="submit"
-                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer shadow-xl"
+                disabled={isSubmitting}
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span>Submit Tender Brief</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Submitting...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Tender Brief</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </>
+                )}
               </button>
             </div>
           </form>
